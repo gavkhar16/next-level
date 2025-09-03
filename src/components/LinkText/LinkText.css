@@ -1,0 +1,17 @@
+.link-text {
+    text-align: center;
+    color: #007bff;      /* изначальный цвет (синий) */
+    cursor: pointer;     /* чтобы показывалась "рука" */
+    font-size: 16px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .link-text:hover {
+    color: #0056b3;       /* меняем цвет при наведении */
+    text-decoration: underline; /* подчёркивание */
+  }
+  
+  .link-text:active {
+    color: #003f7f;       /* цвет при нажатии */
+  }
+  

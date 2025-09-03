@@ -1,0 +1,33 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #A9A9A9; /* светлый фон в стиле Apple */
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* карточка формы: обёртка для всех children (чтобы тебе не нужно было добавлять Card в LoginPage) */
+.auth-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 768px){
+  .auth-card{
+    width: 350px;
+  }
+}
+
+@media (max-width: 450px){
+  .auth-card{
+    width: 250px;
+  }
+}
