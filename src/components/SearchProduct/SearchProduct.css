@@ -1,0 +1,25 @@
+.search {
+    display: block;          /* чтобы margin auto работал */
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  
+    margin: 20px auto;       /* сверху и снизу 20px, по бокам auto → центр */
+  
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .search::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  

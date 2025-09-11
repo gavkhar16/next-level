@@ -2,6 +2,8 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { MainPage } from "./pages/MainPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "./pages/context/ThemeProvider";
+
 
 const routerConfig = createBrowserRouter([
   {
@@ -11,7 +13,8 @@ const routerConfig = createBrowserRouter([
   {
     path: "/registerpage",
     element: <RegisterPage />,
-  },{
+  },
+  {
     path: "/mainpage",
     element: <MainPage />,
   },
@@ -19,9 +22,11 @@ const routerConfig = createBrowserRouter([
 
 function App() {
   return (
-    <>
-    <RouterProvider router={routerConfig}/>
-    </>
+    <ThemeProvider>
+      <>
+        <RouterProvider router={routerConfig} />
+      </>
+    </ThemeProvider>
   );
 }
 

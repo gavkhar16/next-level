@@ -9,6 +9,8 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+.page-container_dark {
+  background: #443f3f; }
 /* карточка формы: обёртка для всех children (чтобы тебе не нужно было добавлять Card в LoginPage) */
 .auth-card {
   width: 100%;
@@ -20,6 +22,7 @@
   flex-direction: column;
   gap: 16px;
 }
+
 @media (max-width: 768px){
   .auth-card{
     width: 350px;
