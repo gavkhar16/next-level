@@ -3,7 +3,7 @@ import { RegisterPage } from "./pages/RegisterPage";
 import { MainPage } from "./pages/MainPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./pages/context/ThemeProvider";
-
+import { MainPageTest } from "./pages/MainPageTest";
 
 const routerConfig = createBrowserRouter([
   {
@@ -18,6 +18,8 @@ const routerConfig = createBrowserRouter([
     path: "/mainpage",
     element: <MainPage />,
   },
+  { path: "/test", 
+    element: <MainPageTest /> },
 ]);
 
 function App() {

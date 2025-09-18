@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { loginUser } from "../Utils/App";
 import AppInput from "../components/AppInput/AppInput";
 import AppButton from "../components/AppButton/AppButton";
-import AppHeader from "../components/AppHeader/AppHeader";
 import PageContainer from "../components/PageContainer/PageContainer";
 import LinkText from "../components/LinkText/LinkText";
 import { ThemeContext, Themes } from "./context/ThemeContext";
@@ -52,9 +51,11 @@ export const LoginPage = () => {
 
   return (
     <>
-      <AppHeader />
+     
+        
+    
       <PageContainer>
-        <MainText  text="Вход"/>
+        <MainText text="Вход" />
         {message && (
           <div style={{ color: "green", margin: "10px 0" }}>{message}</div>
         )}
@@ -62,18 +63,24 @@ export const LoginPage = () => {
         <form onSubmit={handleSubmit}>
           <AppInput
             inputPlaceholder="Введите ваш email"
-            value={formData.email}
+            labelValue={formData.email}
+            правильно
             labelChange={(value) => handleInputChange("email", value)}
             inputType="email"
             isRequired
+            hasError={!!error}
+            errorText={error}
           />
 
           <AppInput
             inputPlaceholder="Введите ваш пароль"
-            value={formData.password}
+            labelValue={formData.password}
+            правильно
             labelChange={(value) => handleInputChange("password", value)}
             inputType="password"
             isRequired
+            hasError={!!error}
+            errorText={error}
           />
 
           {error && (

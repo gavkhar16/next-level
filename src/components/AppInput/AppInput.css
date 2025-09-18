@@ -47,11 +47,12 @@
   color: #eb5757;
 }
 
-.input-wrapper._error input::placeholder {
-  color: #eb5757;                     /* красный placeholder */
+.input-wrapper._error input {
+  border-color: #eb5757;  
+  color: #eb5757;           
 }
 
-.input-wrapper._error #error-message {
-  display: block;
-  margin-top: 20px;
+.input-wrapper._error input::placeholder {
+  color: #eb5757;         
 }
+
