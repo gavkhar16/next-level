@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./pages/context/ThemeProvider";
 import { MainPageTest } from "./pages/MainPageTest";
 
+
 const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -24,11 +25,12 @@ const routerConfig = createBrowserRouter([
 
 function App() {
   return (
-    <ThemeProvider>
-      <>
-        <RouterProvider router={routerConfig} />
-      </>
-    </ThemeProvider>
+    <MainPageTest/>
+    // <ThemeProvider>
+    //   <>
+    //     <RouterProvider router={routerConfig} />
+    //   </>
+    // </ThemeProvider>
   );
 }
 
