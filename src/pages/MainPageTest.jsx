@@ -1,4 +1,4 @@
-// Products.jsx
+
 import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 
@@ -24,7 +24,7 @@ export  function MainPageTest() {
   if (loading) return <p>Загрузка данных...</p>;
   if (!products.length) return <p>Данные не найдены</p>;
 
-  // Линейный график рейтингов
+ 
   const ratingOptions = {
     chart: { id: "rating-chart" },
     xaxis: { categories: products.map(p => p.title) },
@@ -32,7 +32,7 @@ export  function MainPageTest() {
   };
   const ratingSeries = [{ name: "Rating", data: products.map(p => p.rating) }];
 
-  // Столбчатый график запасов
+ 
   const stockOptions = {
     chart: { id: "stock-chart" },
     xaxis: { categories: products.map(p => p.title) },
@@ -40,7 +40,7 @@ export  function MainPageTest() {
   };
   const stockSeries = [{ name: "Stock", data: products.map(p => p.stock) }];
 
-  // Круговая диаграмма количества отзывов
+
   const reviewsOptions = {
     labels: products.map(p => p.title),
     title: { text: "Количество отзывов", align: "center" }
